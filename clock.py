@@ -1,8 +1,9 @@
-# coding=utf-8
+ # coding=utf-8
 
 import turtle
 from datetime import *
-
+turtle.title("CLOCK")
+turtle.bgcolor("#85C88A")
 # Lift the paintbrush and move it forward for a distance
 def Skip(step):
     turtle.penup()
@@ -78,14 +79,14 @@ def SetupClock(radius):
 
 def Week(t):   
     week = ["Monday", "Tuesday", "Wednesday",
-            "Thursday", "Friday", "on Saturday", "on Sunday"]
+            "Thursday", "Friday", "Saturday", "Sunday"]
     return week[t.weekday()]
 
 def Date(t):
     y = t.year
     m = t.month
     d = t.day
-    return "%s %d%d" % (y, m, d)
+    return "%s %d %d" % (d, m, y)
 
 def Tick():
     # Draw the dynamic display of hands
